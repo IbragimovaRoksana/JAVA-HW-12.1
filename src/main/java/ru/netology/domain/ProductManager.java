@@ -34,24 +34,12 @@ public class ProductManager {
 
     // метод определения соответствия товара product запросу search
     public boolean matches(Product product, String search) {
-        if (product instanceof Book) {
-            Book book = (Book) product;
-            if (book.getName().equalsIgnoreCase(search)) {
-                return true;
-            }
-            if (book.getAuthor().equalsIgnoreCase(search)) {
-                return true;
-            }
+        if (product.getName().contains(search)) {
+            return true;
+        } else {
+            return false;
         }
-        if (product instanceof Smartphone) {
-            Smartphone smartphone = (Smartphone) product;
-            if (smartphone.getName().equalsIgnoreCase(search)) {
-                return true;
-            }
-            if (smartphone.getProduce().equalsIgnoreCase(search)) {
-                return true;
-            }
-        }
-        return false;
+        // или в одну строку:
+        // return product.getName().contains(search);
     }
 }

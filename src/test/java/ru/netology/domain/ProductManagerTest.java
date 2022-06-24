@@ -70,11 +70,4 @@ class ProductManagerTest {
         assertArrayEquals(expected, actual);
     }
 
-    @Test
-    void shouldSearchByAuthor(){
-        Product[] actual = manager.searchBy("Samseong Gurub");
-        Product[] expected = new Product[]{samsung, samsungPhone};
-        assertArrayEquals(expected, actual);
-    }
-
 }
