@@ -22,7 +22,17 @@ public class Book extends Product {
                 "id=" + super.getId() +
                 ", name='" + super.getName() +
                 ", price=" + super.getPrice() +
-                ", author='" + author +
+                ", author='" + getAuthor() +
                 "'}";
+    }
+
+    @Override
+    // метод определения соответствия товара product запросу search
+    public boolean matches(String search) {
+        if (super.matches(search)) {
+            return true;
+        } else {
+            return author.contains(search);
+        }
     }
 }

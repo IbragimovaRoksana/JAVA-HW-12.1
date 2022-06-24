@@ -22,7 +22,17 @@ public class Smartphone extends Product {
                 "id=" + super.getId() +
                 ", name='" + super.getName() + '\'' +
                 ", price=" + super.getPrice() + '\'' +
-                ", produce='" + produce + '\'' +
+                ", produce='" + getProduce() + '\'' +
                 '}';
+    }
+
+    @Override
+    // метод определения соответствия товара product запросу search
+    public boolean matches(String search) {
+        if (super.matches(search)) {
+            return true;
+        } else {
+            return produce.contains(search);
+        }
     }
 }

@@ -77,4 +77,11 @@ class ProductManagerTest {
         assertArrayEquals(expected, actual);
     }
 
+    @Test
+    void shouldSearchSameName(){
+        Product[] actual = manager.searchBy("Samsung");
+        Product[] expected = new Product[]{samsung, samsungPhone};
+        assertArrayEquals(expected, actual);
+    }
+
 }
