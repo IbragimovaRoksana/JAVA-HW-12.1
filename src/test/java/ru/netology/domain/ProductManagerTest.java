@@ -70,4 +70,11 @@ class ProductManagerTest {
         assertArrayEquals(expected, actual);
     }
 
+    @Test
+    void shouldSearchXiaomi(){
+        Product[] actual = manager.searchBy("Xiaomi");
+        Product[] expected = new Product[]{xiaomiF2, xiaomiRedmi9};
+        assertArrayEquals(expected, actual);
+    }
+
 }
