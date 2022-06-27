@@ -22,7 +22,7 @@ public class Smartphone extends Product {
                 "id=" + super.getId() +
                 ", name='" + super.getName() + '\'' +
                 ", price=" + super.getPrice() + '\'' +
-                ", produce='" + produce + '\'' +
+                ", produce='" + getProduce() + '\'' +
                 '}';
     }
 }

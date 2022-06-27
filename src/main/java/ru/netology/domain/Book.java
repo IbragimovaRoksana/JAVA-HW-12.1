@@ -22,7 +22,7 @@ public class Book extends Product {
                 "id=" + super.getId() +
                 ", name='" + super.getName() +
                 ", price=" + super.getPrice() +
-                ", author='" + author +
+                ", author='" + getAuthor() +
                 "'}";
     }
 }
